@@ -4,12 +4,14 @@
  */
 package gestionbus;
 import static gestionbus.Utils.Menu;
+import java.util.ArrayList;
 /**
  *
  * @author ausias
  */
 public class GestionBus {
-
+    static ArrayList<Conductor> listaCon = new ArrayList<>();
+    static ArrayList<Conductor> flota = new ArrayList<>();
     /**
      * @param args the command line arguments
      */
@@ -20,7 +22,7 @@ public class GestionBus {
 "Llistar autobusos",
 "Llistar conductors");
     }
-    public static void Menus(){
+    public static void Menus(int opcion){
         
     }
     
