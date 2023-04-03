@@ -4,24 +4,28 @@
  */
 package gestionbus;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ausias
  */
-public abstract class Autobus {
+public abstract class Autobus{
     private int identificador;
     private Conductor conductor;
     private float precio;
-
+    public static ArrayList<Integer> identificadores;
+        
     @Override
     public String toString() {
-        return "Autobus{" + "identificador=" + identificador + ", conductor=" + conductor + ", precio=" + precio + '}';
+        return  "Identificador :" + identificador + ", conductor: " + conductor.getNom() + ", precio billete: " + precio;
     }
 
     public Autobus(int identificador, Conductor conductor, float precio) {
         this.identificador = identificador;
         this.conductor = conductor;
         this.precio = precio;
+        AddID(identificador);
     }
 
     public int getIdentificador() {
@@ -42,6 +46,12 @@ public abstract class Autobus {
 
     public void setConductor(Conductor conductor) {
         this.conductor = conductor;
+    }
+    private void AddID(int id){
+        if(identificadores==null){
+            identificadores=new ArrayList<>();
+        }
+        identificadores.add(id);
     }
     
 }

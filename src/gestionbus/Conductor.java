@@ -18,7 +18,7 @@ public class Conductor {
     }
     @Override
     public String toString() {
-        return "Conductor{" + "nom=" + nom + ", salari=" + salari + '}';
+        return nom + ", Salario: " + salari;
     }
 
     public void setNom(String nom) {

@@ -22,7 +22,7 @@ public class InterUrbano extends Autobus {
 
     @Override
     public String toString() {
-        return "InterUrbano{" + "kilometros=" + kilometros + '}';
+        return "InterUrbano ( Kilometros: " + kilometros +") "+ super.toString();
     }
 
     public void setKilometros(float kilometros) {

@@ -26,7 +26,7 @@ public class Urbano extends Autobus {
 
     @Override
     public String toString() {
-        return "Urbano{" + "ruta=" + ruta + '}';
+        return "Urbano (Ruta: " + ruta +") "+ super.toString();
     }
 
     public void setRuta(String ruta) {

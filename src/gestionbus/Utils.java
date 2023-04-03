@@ -197,6 +197,18 @@ public static int pedirnum(String a) {
         num = s.nextInt();
         return num;
     }
+public static float pedirF(String a) {
+        float num;
+        Scanner s=new Scanner(System.in);
+        System.out.print(a);
+        while (!s.hasNextFloat()) {
+            s.next();
+            System.out.println("ERROR");
+            System.out.print(a);
+        }
+        num = s.nextFloat();
+        return num;
+    }
 
     /**
      * Agafa un int entre un rang de valors
@@ -218,6 +230,17 @@ public static int pedirnum(String a) {
             }
         } while (!valid);
         return opcio;
+    }
+    public static String llegirString(String f) {
+        String texto = null;
+        Scanner s=new Scanner(System.in);
+        boolean valido = false;
+        while (!valido) {
+            System.out.print(f);
+                texto = s.nextLine();
+                valido = true;
+        }
+        return texto;
     }
 
 // </editor-fold>    	
